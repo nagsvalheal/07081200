@@ -1,0 +1,25 @@
+<!-- This lightning web component is used for Homeicon in Thankyou msg Page-->
+<template>
+	<button onclick={openHome} class="home-button">
+		<img class="hicon" src={HIcon} alt="Home Icon"/>
+		<img src={HIconMobile} class="hiconmobile" alt="Home Icon Mobile"/>
+	</button>
+	<template if:true={openModal}>
+		<div class="modal-backdrop"></div>
+		<div class="modal-visible">
+			<div class="modal-close">
+				<span onclick={handleNo} class="xmark">&times;</span>
+			</div>
+			<div class="modal-content">
+				<p class="modalHead">{leaveThisPage}</p>
+				<div class="modal-close">
+					<button class="modal-close-button" onclick={handleNo} >
+						<span>&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</template>
+
+
+</template>
